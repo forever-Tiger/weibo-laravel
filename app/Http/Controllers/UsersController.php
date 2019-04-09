@@ -14,7 +14,7 @@ class UsersController extends Controller
     {
         return view('users.show', compact('user'));
     }
-    public function store()
+    public function store(Request $request)
     {
         $this->validate($request, [
             'name' => 'required|max:50',
